@@ -13,14 +13,24 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+
+
 var About = function(){
 	alert("Just a regular dude");
 }
 
 $(document).ready(function() {
+
+
         $('#articles .pagination a').attr('data-remote', 'true');
         
+   setTimeout(function(){ 
+   	$("#logo").fadeOut(1000);
+   	$("#logo_2").fadeIn(1000);
 
+   }, 15000);
         
         
     });
@@ -33,6 +43,8 @@ var register_hit = true;
 //alert ("Works")
 
 var register = function(){
+	$("#inner_nav ul li a").css("text-decoration","none");
+	$("#inner_nav ul li:nth-child(4) a").css("text-decoration","underline");
 	$("#search_field").hide();
 	$("#login").hide();
 
@@ -51,6 +63,8 @@ var register = function(){
 }
 
 var login = function(){
+	$("#inner_nav ul li a").css("text-decoration","none");
+	$("#inner_nav ul li:nth-child(3) a").css("text-decoration","underline");
 	$("#search_field").hide();
 	$("#register").hide();
 	$("#login").slideDown(300);
@@ -61,6 +75,7 @@ var search_field = function(){
 }
 
 var exOut = function(){
+	$("#inner_nav ul li a").css("text-decoration","none");
 	$("#register, #login").slideUp(300);
 	$("#notice h1").text("");
 }

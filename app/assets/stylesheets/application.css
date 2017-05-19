@@ -37,22 +37,23 @@ ul{list-style-type: none;}
     border-bottom: 5px solid #222;
 }
 
-#top_nav ul{
+#inner_nav{
     width: 960px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 0 auto;    
+}
+
+#inner_nav ul{
     text-align: right;
     line-height: 36px;}
 
-#top_nav ul li, #top_nav ul li a{
+#inner_nav ul li, #inner_nav ul li a{
 display: inline;
 margin-left: 5px;
 text-transform: lowercase;
 color:#fff;
 }
 
-#active{
-    border-bottom: 1px solid #fff;
-}
+
 
 @keyframes change {
     0%   {background: #222222;}
@@ -74,44 +75,7 @@ color:#fff;
     animation-iteration-count: infinite;
 }
 
-#search{
-    padding-top:20px;
-    padding-bottom:20px;
-    width:960px;
-    margin: 0 auto 0 auto;
-    
-}
 
-#search form{
-    
-    width:460px;
-    float: left;
-    background-color: #fff;
-}
-
-#search p{
-    
-    min-width:460px;
-    margin-left: 0px;
-    float: left;
-    text-align:right;
-    margin-top:20px;
-    text-align: right;
-    padding: 10px 0px 10px 20px;
-    border-bottom:1px solid #ccc;
-}
-#search p a{
-    float:right;
-    clear: right;
-    color: #222;
-
-}
-
-#search p a:first-letter{
-    font-weight: bold;
-    margin-right:1px;
-    font-size:18px;
-}
 
 
 
@@ -175,6 +139,16 @@ body{
         color: green;
 }
 
+
+#logo_2{
+    display: none;
+float:left;
+font: normal 18px Consolas, Monaco, monospace;
+padding-top: 10px;
+
+}
+
+#logo_2 a{color:#fff;}
 /**/
 
 @-webkit-keyframes typing { from { width: 0; } }
@@ -182,7 +156,7 @@ body{
 
 #logo p{ 
     padding:20px 0 20px 0;
-    line-height: 24px;
+    height:20px;
     font: bold 250% Consolas, Monaco, monospace;
     border-right: .1em solid black;
     width: 16.5em; 
