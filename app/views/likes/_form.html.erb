@@ -1,0 +1,42 @@
+<%= form_for(@like) do |f| %>
+
+
+<form>
+
+<ul>
+<li>
+<fieldset>
+<legend>Name</legend>
+<%= f.text_field :title %>
+<span>Enter new Like</span>
+</fieldset>
+</li>
+
+<li>
+<fieldset>
+<legend>Source</legend>
+<%= f.text_field :source %>
+<span>Enter URL</span>
+</fieldset>
+</li>
+
+<li>
+<fieldset>
+<legend>Link</legend>
+<%= f.text_field :link %>
+<span>Enter link</span>
+</fieldset>
+</li>
+
+<li>
+<%= f.submit %>
+</li>
+</ul>
+
+</form>
+<% end %>
+
+
+
+
+</ul>

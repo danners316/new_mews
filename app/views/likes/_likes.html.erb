@@ -1,0 +1,12 @@
+
+
+<% @likes.each do|like| %>
+<dl>
+<dt><%= like.source %>:</dt>
+<dd><a target="_blank" href="<%= like.link %>"><%= like.title %> &raquo;</a></dd>
+
+
+
+</dl>
+<% end %>
+

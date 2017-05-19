@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mo Mews Mo Problems</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="top_nav">
+<ul>
+    
+    <li><a id="active" href="#contact">Contact</a></li>
+    <li onclick="About()">About</li>    
+    <% if current_user %>
+    <li><%= link_to "logout", logout_path %></li>
+    <% if current_user.admin %>
+    <li><%= link_to 'publish', new_topic_path %></li>
+    <li><%= link_to 'New Like', new_like_path %></li>
+    <% end %>
+    <% else %>
+    <li><a onclick="login()">login</a></li>
+    <li><a onclick="register()">register</a></li>
+    <% end %>
+    </ul>
+</div>
+<div id="search">
+
+  
+<form>
+<%= form_tag topics_path, :method => 'get', :id => "topics_search", :remote => true do %>
+
+<ul>
+  <li>
+  <fieldset>
+  <legend>Article Search</legend>
+  <%= text_field_tag :search_query, params[:search_query], :size => "50" %>
+  <span>Enter a Search</span>
+  </li>
+
+  <li>
+  <%= submit_tag "Search", :name => nil  %>
+  </li>
+</ul>
+
+<% end %>
+</form>
+
+
+  <%= render 'topics/list_search' %>
+
+</div> 
+
+
+
+  </p>
+</div>
+<div id="outwrap">
+<div id="logo">
+  <p class="type_it" onclick="removeType()"><%= link_to "danielreynolds.ca", root_path %></p>
+</div>
+<div id="nav">
+  <ul>
+    
+    
+    <% if current_user %>
+    <li><%= link_to "logout", logout_path %></li>
+    <% if current_user.admin %>
+    <li><%= link_to 'publish', new_topic_path %></li>
+    <% end %>
+    <% else %>
+    <li><a onclick="login()">login</a></li>
+    <li><a onclick="register()">register</a></li>
+    <% end %>
+    
+    
+</div>
+<div id="notice">
+
+<h1>
+<% if flash[:notice] %>
+<div id="notice">
+<%= notice %>
+
+</div>
+<% end %>
+</h1>
+</div>
+
+<div id="register">
+  <%= render 'users/form' %>
+  <button onclick="exOut()" class="ex_out">Back</button>
+</div>
+<div id="login">
+  <%= render 'sessions/login' %>
+  <button onclick="exOut()" class="ex_out">Back</button>
+</div>
+
+
+
+
+</div>
+
+<div id="wrapper">
+
+
+
+
+
+
+
+
+<%= yield %>
+
+
+</div>
+
+</div>
+  
+
+</body>
+</html>

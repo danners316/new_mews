@@ -1,0 +1,18 @@
+<% @food.each do |topic| %>
+    <span id="byline"><%= topic.name %> - <%= topic.created_at.strftime("%A, %b %d") %></span>
+    <h1><%= link_to topic.title, topic %></h1>
+    <hr />
+    <% if topic.attachment.file? %>
+        <%= image_tag topic.attachment.url, :class => "picture" %>
+    <% end %>
+    <%= simple_format(truncate(topic.body, :length => 1000)) %>
+    <%= link_to "Read More", topic, :class => "read_more" %>
+
+
+      <% if current_user && current_user.admin %>
+          - <%= link_to 'Edit', edit_topic_path(topic), :class => "read_more" %> -
+          <%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' }, :class => "read_more" %>
+      <% end %>
+      <hr />
+<% end %>
+

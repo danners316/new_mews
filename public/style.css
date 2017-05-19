@@ -1,0 +1,203 @@
+
+
+*{
+		padding:0;
+		margin:0;
+}
+
+ul{list-style-type: none;
+	width:300px;
+	margin:0 auto 0 auto;
+	text-align: right;
+}
+
+	ul li{font-family: Arial, Helvetica, sans-serif;
+	}
+
+h1{color:red;}
+
+body{
+		background-color:#fff;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-weight: lighter;
+		color:#4d4d4d;
+		font-style: italic;
+}
+#outwrap{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto; 
+    position:relative;
+}
+
+#wrapper{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto; 
+    position:relative;
+}
+
+#logo, #nav{
+		width:50%;
+		float:left;
+}
+
+#logo p{
+		padding:20px 0 20px 0;
+		color:green;
+}
+
+#nav{
+		text-align: right;
+}
+
+#nav ul{
+		padding:20px 0 20px 0;
+		list-style-type: none;
+		text-align: right;
+}
+
+#nav ul li{
+		display:inline;
+		padding-right: 4px;
+}
+
+a{
+		color:#4d4d4d;
+		text-decoration: none;
+}
+
+a:hover{
+		color:green;
+}
+
+#notice{
+	width:100%;
+	height:40px;
+	clear:both;
+
+}
+
+#notice h1{
+	line-height: 36px;
+	font-size: 18px;
+	text-align: center;
+	
+	color:;
+}
+
+#register{
+		display: none;
+		border-top:1px dashed green;
+		border-bottom:1px dashed green;
+		width:100%;
+		padding: 20px;
+		clear:both;
+		position: relative;
+}
+
+.ex_out{
+	position:absolute;
+	top: 20px;
+	right: 20px;
+	border:1px solid #222;
+	padding: 2px;
+	cursor: pointer;
+}
+
+#login{
+		display:none;
+		border-top:1px dashed green;
+		border-bottom:1px dashed green;
+		width:100%;
+		padding: 20px;
+		clear:both;
+		position: relative;
+}
+
+#login table{
+
+		text-align:right;		
+}
+
+#login table td{
+		padding:4px;		
+}
+
+fieldset{
+	padding:10px;
+	color: green;
+	border: 1px solid #DDD;
+}
+
+input[type="text"],
+input[type="password"]{
+		display:block;
+		background-color: #fff;
+		line-height: 25px;
+		border: none;
+		outline: none;
+		font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+fieldset span{
+		display: block;
+		padding: 2px 0 2px 0;
+		margin: 2px 0 2px 0;
+		color:green;
+		background-color: #f3f3f3;;
+		text-align: center;
+		width: 100%;
+		font-size:11px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-style: normal;
+}
+
+input[type="submit"],
+input[type="button"]{
+        background: #DDD;
+    color:green;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 3px solid ##999;
+    border-radius: 3px;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover{
+    background: #DDD;
+    color:green;
+    cursor: pointer;
+}
+
+
+/* Home Page - topics/index.html.erb */
+
+.article h1{
+		color:red;		
+}
+
+
+
+
+

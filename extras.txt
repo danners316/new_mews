@@ -1,0 +1,221 @@
+ <div id="quotes">
+    <%= image_tag "quote1.png" %>
+    <!--<%= image_tag "quote2.png" %> -->
+    <%= image_tag "quote3.png" %>
+   <!-- <%= image_tag "quote4.png" %>
+    <%= image_tag "quote5.png" %>  -->
+  </div>
+
+
+
+  
+ 
+
+
+<div id="tables_box">
+  <table>
+    <tr><td><h1>Links</h1></td></tr>
+    <tr><td><a href="mailto:daniel.reynolds7a@gmail.com?Subject=Article" target="_top"> Send Me an Article</a></td></tr>
+    <tr><td><a href="#nav" onclick="show_register()" class="pointer">Register To Comment</a></td></tr>
+    <tr><td><a href="mailto:daniel.reynolds7a@gmail.com?Subject=Author" target="_top">Become An Author'</a></td></tr>
+    <tr><td><%= link_to 'View Archives', topics_backlog_path %></td></tr>
+    <tr><td><a href="mailto:daniel.reynolds7a@gmail.com?Subject=GeneralMail" target="_top">Mail Me</a></td></tr>
+    <tr><td><a href="mailto:daniel.reynolds7a@gmail.com?Subject=WebDesign" target="_top">Request Web Design?</a></td></tr>
+    <tr><td><%= link_to 'About Me', "http://dan.fernconsult.ie", :target => "_blank" %></td></tr>
+
+  </table>
+
+    <table id="table2">
+
+    <form name="contact" onsubmit="return validateForm();" action="mailto:daniel.reynolds7a@gmail.com?subject=Customer_Inquiry" enctype="text/plain"  method="post" >
+      <tr><td><label>Your name:</label></td></tr>
+      <tr><td><input type="text" name="First Name" id="fname" /></td></tr>
+      <tr><td><label>E-mail: </label></td></tr>
+      <tr><td><input type="text" name="E-mail" id="email"/></td></tr>
+      <tr><td><label>Message: </label> <textarea name="Message" id="Message" rows="9" cols="16"></textarea></td></tr>
+      <tr><td><%= image_submit_tag("submit.png")%></td></tr>
+
+    </form>
+
+    </table>
+
+
+</div>
+<div id="special_box">
+<div class="specials">
+  <p id="cat">
+    <a onclick="show_football()" class="pointer"><%= image_tag 'football.png' %> </a>|
+    <a onclick="show_travel()" class="pointer"><%= image_tag 'travel.png' %> </a>|
+    <a onclick="show_food()" class="pointer"><%= image_tag 'food.png' %></a>|
+    <a onclick="show_general()" class="pointer"><%= image_tag 'general.png' %> </a>
+  </p>
+</div>
+  <div class="specials">
+    <h2 id="green">Tune of the Week</h2>
+    <p>
+
+      <%= image_tag 'tune.png', :class => "fl" %>
+      <span class="title">Artist:</span>Explosions in The Sky<br />& David Wingo<br />
+      <span class="title">Song:</span>Send Off<br /><br />
+
+      <audio controls="controls">
+        <source src='/assets/tune.mp3' />
+      </audio></p>
+  </div>
+  <div class="specials">
+    <h2 id="yellow">Image of the Week</h2>
+    <p><%= image_tag 'joke.png', :class => "fl"  %>
+      <span class="title">Florence</span>
+      Bikers on Rooftop
+      <br /><br /> <%=  link_to image_tag("link.gif"), "http://onebigphoto.com/riders-on-the-roof-of-florence-dome/?utm_source=newsletter&utm_medium=email&utm_campaign=newletter%2Banalytics", :target => "_blank" %></p>
+  </div>
+  <div class="specials">
+    <h2 id="Red">Today's Headlines</h2>
+    <p><span id="line">Today a woman shot another who was woman</span></p>
+  </div>
+  <div id="youtube">
+    <h2><%= image_tag 'tube.png' %></h2>
+    <iframe width="490" height="250"
+            src="//www.youtube.com/embed/H2DPeO9aKV4" allowfullscreen>
+    </iframe>
+  </div>
+
+
+
+</div>
+
+      <div id="articles">
+
+       <%= render 'topics/articles' %>
+           </div>
+<div class="flcl"></div>
+<div id="tagbar2"><span class="KG">Article Search:</span><%= form_tag topics_path, :method => 'get', :remote => true do %>
+      <%= text_field_tag :search_query, params[:search_query] %>
+      <%= image_submit_tag("login.png")%>
+  <% end %></div>
+
+
+
+
+  
+<div id="likes">
+
+  <h1>Likes</h1>
+  <hr />
+  <%= render 'likes/likes' %>
+
+  <span class="title"><%= link_to 'View All Likes', likes_path %></span>
+
+</div>
+<div id="backlog_box">
+
+  <h1>Backlog</h1>
+
+  <hr />
+
+  <div id="backlog">
+  <%= render 'topics/list' %>
+
+  </div>
+
+
+
+  </div>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $('#articles .pagination a').attr('data-remote', 'true');
+        $('#backlog .pagination a').attr('data-remote', 'true');
+    });</script>
+
+
+
+
+<!-- APLLICATION.HTML.ERB -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mo Mews Mo Problems</title>
+  <%= stylesheet_link_tag "style.css" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="outwrap">
+
+<div id="bar">
+  <%= link_to image_tag('logo.png'), root_path %>
+  <%= link_to image_tag('twitter.png'), "http://ie.linkedin.com/in/danielreynolds7a/" %>
+  <%= link_to image_tag('facebook.png'), "http://ie.linkedin.com/in/danielreynolds7a/" %>
+  <a href="mailto:daniel.reynolds7a@gmail.com?Subject=GeneralMail" target="_top"><%= image_tag('mail.png') %></a>
+  <div id="login" >
+
+    <%= render 'sessions/login' %>
+  </div>
+
+  <div id="register" >
+
+    <%= render 'users/form' %>
+  </div>
+
+
+<div id="nav">
+
+<% unless current_user %>
+<%= link_to 'Home', root_path %>
+<a onclick="show_login()" class="pointer">Login</a>
+<a onclick="show_register()" class="pointer">Register</a>
+<%end %>
+<% if current_user && current_user.admin %>
+<%= link_to 'New Article', new_topic_path %>
+<%= link_to 'New Like', new_like_path %>
+
+<% end %>
+<% if current_user %>
+<%= link_to "Logout", logout_path %>
+<% end %>
+
+</div>
+
+
+
+
+</div>
+
+
+<div id="wrapper">
+
+
+
+
+
+
+
+<%= yield %>
+
+</div>
+
+</div>
+  
+<script src="jquery-1.9.1.min.js"></script>
+<script src="jquery.cycle.all.js"></script>
+<script src="script.js"></script>
+<!-- <div id="register_box"><a onclick="scroll_top()" class="pointer"><%= image_tag('totop.png') %></a></div> _-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

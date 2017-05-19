@@ -1,0 +1,31 @@
+
+
+
+    <% @topics.each do |topic| %>
+    <div class="article">
+    <h2><%= link_to topic.title, topic %></h2><h6><%= topic.tag %></h6>
+    
+    <p>
+    <div class="img">
+    <% if topic.attachment.file? %>
+    <%= image_tag topic.attachment.url, :class => "picture" %>
+    <% end %>
+    <h4><%= topic.name %></h4>
+    <h5><%= topic.created_at.strftime("%A, %b %d") %></h5>
+    </div>
+    <%= simple_format(truncate(topic.body, :length => 950)) %>
+    </p>
+    <h5><%= link_to "Read More", topic, :class => "read_more" %><% if current_user && current_user.admin %> - <%= link_to 'E', edit_topic_path(topic), :class => "read_more"  %> -
+    <%= link_to 'D', topic, method: :delete, data: { confirm: 'Are you sure?' }, :class => "read_more"  %><% end %></h5>
+    
+   
+    
+
+    
+    
+    </div>
+    <% end %>
+
+
+
+<%= will_paginate @topics, :previous_label => '<---', :next_label => '--->',  :param_name => 'main_articles_page', :page_links => false, :arrows => false %>

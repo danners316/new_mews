@@ -1,0 +1,29 @@
+<%= form_for(@user) do |f| %>
+<form>
+
+<ul>
+<li>
+<fieldset>
+<legend>Name</legend>
+    <%= f.text_field :name, :value => "", :size => "20" %>
+    <span>Enter your full name here</span>
+</li>
+</fieldset>
+
+
+
+
+<li>
+<fieldset>
+<legend>Pasword</legend>
+    <%= f.password_field :password, :value => "Password", :size => "20" %>
+    <span>Enter a Password</span>
+</li>
+</fieldset>
+<li>
+    <%= submit_tag ("Register")%>
+</li>
+</ul>
+</form>
+
+<% end %>

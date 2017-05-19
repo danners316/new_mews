@@ -1,0 +1,19 @@
+
+<div id="tagbar">
+  <span class="KG">I </span>
+  <%= image_tag 'heart.png' %>
+  <a onclick="show_football1()" class="pointer">Football </a> -
+  <a onclick="show_travel1()" class="pointer">Travel </a> -
+  <a onclick="show_food1()" class="pointer">Food </a> -
+  <a onclick="show_general1()" class="pointer">General </a> -
+  <a onclick="show_today()" class="pointer">Today's </a> -
+  <a onclick="show_month()" class="pointer">This Month's </a> -
+  <a onclick="show_all1()" class="pointer"> View All</a></div>
+  <div id="archives">
+  <div id="football"><%= render 'topics/football' %></div>
+  <div id="general"><%= render 'topics/general' %></div>
+  <div id="travel"><%= render 'topics/travel' %></div>
+  <div id="food"><%= render 'topics/food' %></div>
+    <div id="today"><%= render 'topics/today' %></div>
+    <div id="month"><%= render 'topics/months' %></div>
+  </div>

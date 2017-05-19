@@ -1,0 +1,59 @@
+<%= form_for(@topic) do |f| %>
+<div id="topics_new">
+<form>
+
+
+  <ul>
+
+    <li>
+      <fieldset>
+        <legend>Title</legend>
+        <%= f.text_area :title, :size => "100x1" %>
+        <span>Enter your Title</span>
+      </fieldset>
+    </li>
+
+    <li>
+      <fieldset>
+        <legend>Body</legend>
+        <%= f.text_area :body, :size => "100x30" %>
+        <span>Enter text here</span>
+      </fieldset>
+    </li>
+
+    <li>
+      <fieldset>
+        <legend>Chose a Picture</legend>
+        <%= f.file_field :attachment %>
+        <span>--</span>
+     </fieldset>
+    </li>
+   
+
+
+    <li>
+      <fieldset>
+        <legend>Tag It</legend>
+        <%= f.select :tag, ['General', 'Football', 'Ramblings', 'Travel', 'Food'] %>
+        <span>--</span>
+      </fieldset>  
+    </li>
+    
+
+
+    <li>
+    <%= f.hidden_field :name, :value => "#{current_user.name}"  %>
+    </li>
+
+
+    <li>
+      <%= f.submit %>
+    </li>
+
+  </ul>
+
+
+</form>
+</div>
+
+<% end %>

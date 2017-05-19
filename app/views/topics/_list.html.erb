@@ -1,0 +1,16 @@
+<h5>Older</h5>
+
+<% @topics_all.each.with_index do|topic, index| %>
+		<% if index.odd? %>
+		<figure class="bottom">
+		<% else %>
+		<figure class="top">
+		<% end %>
+			<% if topic.attachment.file? %>
+        <%= image_tag topic.attachment.url, :class => "picture" %>
+    <% end %>	
+			<figcaption><%= link_to topic.title, topic %></figcaption>	
+		</figure>
+<% end %>
+
+

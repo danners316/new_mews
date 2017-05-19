@@ -1,0 +1,51 @@
+
+
+
+<div id="articles">
+<%= render 'topics/articles' %>
+</div>
+
+	<div id="side">
+		<!-- side-->
+		<%= render 'topics/list' %>
+		<!-- side-->
+	</div>
+
+<div id="contact">
+
+<form name="contact" action="mailto:daniel.reynolds7a@gmail.com?subject=Customer_Inquiry" enctype="text/plain"  method="post" >
+
+<ul>
+
+<li>
+<fieldset>
+<legend>E-mail</legend>
+    <input width="300px" type="text" name="E-mail" id="email" />
+    <span>Enter E-mail</span>
+</fieldset>
+</li>
+
+<li>
+<fieldset>
+<legend>Contact</legend>
+    <textarea name="Message" id="Message" rows="9" cols="38"></textarea>
+    <span>Type Your Message</span>
+</fieldset>
+</li>
+<li><%= submit_tag("submit.png")%></li>
+</ul>
+</form>
+
+</div>
+
+<div id="likes">
+	<h5>Likes</h5>
+	<%= render 'likes/likes' %>
+</div>
+      
+      
+  
+  
+
+
+  

@@ -1,0 +1,829 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@font-face {
+    font-family: "KG Be Still And Know";
+    src: url('kgbestillandknow-webfont.eot');
+    src: url('kgbestillandknow-webfont.eot?#iefix') format('embedded-opentype'),
+    url('kgbestillandknow-webfont.woff') format('woff'),
+    url('kgbestillandknow-webfont.ttf') format('truetype'),
+    url("kgbestillandknow-webfont.svg#KG Be Still And Know") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+        padding:0;
+        margin:0;
+}
+
+ul{list-style-type: none;}
+
+#top_nav{
+    width:100%;
+    background-color: #222;
+    color: #fff;
+    border-bottom: 5px solid #222;
+}
+
+#top_nav ul{
+    width: 960px;
+    margin: 0 auto 0 auto;
+    text-align: right;
+    line-height: 36px;}
+
+#top_nav ul li, #top_nav ul li a{
+display: inline;
+margin-left: 5px;
+text-transform: lowercase;
+color:#fff;
+}
+
+#active{
+    border-bottom: 1px solid #fff;
+}
+
+@keyframes change {
+    0%   {background: #222222;}
+    25%  {background: #ffffff;}
+    50%  {background: #ffffff;}
+    100% {background: #222222;}
+}
+
+.circ{
+    width:15px;
+    height:15px;
+    background-color: #222; 
+    display:inline-block; 
+    margin-right: 2px;
+    border-radius:50px;
+    float:right;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#search{
+    padding-top:20px;
+    padding-bottom:20px;
+    width:960px;
+    margin: 0 auto 0 auto;
+    
+}
+
+#search form{
+    
+    width:460px;
+    float: left;
+    background-color: #fff;
+}
+
+#search p{
+    
+    min-width:460px;
+    margin-left: 0px;
+    float: left;
+    text-align:right;
+    margin-top:20px;
+    text-align: right;
+    padding: 10px 0px 10px 20px;
+    border-bottom:1px solid #ccc;
+}
+#search p a{
+    float:right;
+    clear: right;
+    color: #222;
+
+}
+
+#search p a:first-letter{
+    font-weight: bold;
+    margin-right:1px;
+    font-size:18px;
+}
+
+
+
+
+a{cursor: pointer;}
+
+
+
+#login ul, #register ul{
+
+   width:300px;
+   text-align: right;
+}
+
+#topics_new ul{
+
+   width:500px;
+}
+
+
+
+ul li{
+		font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+
+
+
+
+.red{color:red;}
+
+body{
+        background-color:#fff;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: lighter;
+        color:#4d4d4d;
+        font-style: italic;
+        margin-bottom:50px;
+}
+#outwrap{
+    clear: left;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto; 
+    position:relative;
+}
+
+#wrapper{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto; 
+    position:relative;
+}
+
+#logo, #nav{
+        width:50%;
+        float:left;
+        color: green;
+}
+
+/**/
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+#logo p{ 
+    padding:20px 0 20px 0;
+    line-height: 24px;
+    font: bold 250% Consolas, Monaco, monospace;
+    border-right: .1em solid black;
+    width: 16.5em; 
+    width: 17ch;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
+.type_it{
+    -webkit-animation: typing 10s steps(17, end),
+               blink-caret .5s step-end infinite alternate;
+}
+
+
+
+/**/
+
+
+
+#nav{
+        text-align: right;
+}
+
+#nav ul{
+        padding:20px 0 20px 0;
+        list-style-type: none;
+        text-align: right;
+}
+
+#nav ul li{
+        display:inline;
+        padding-right: 4px;
+}
+
+a{
+        color:#4d4d4d;
+        text-decoration: none;
+}
+
+a:hover{
+        color:green;
+}
+
+#notice{
+    width:100%;
+    height:40px;
+    clear:both;
+    color: green;
+
+}
+
+#notice h1{
+color: green;
+    line-height: 36px;
+    font-size: 18px;
+        
+}
+
+#register, #login, #search_field{
+        display: none;
+        border-bottom:1px solid green;
+        width:100%;
+        padding: 0px 0 20px 0;
+        clear:both;
+        position: relative;
+        margin-bottom: 20px;
+        background-image: url('http://images.freeimages.com/images/previews/2ea/splatter-of-paint-1159236.jpg');
+        background-repeat: no-repeat;
+        background-position: right; 
+        background-size: 450px auto;
+}
+
+
+.ex_out{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    border:1px solid #222;
+    padding: 2px;
+    cursor: pointer;
+}
+
+
+
+#login table{
+
+        text-align:right;       
+}
+
+#login table td{
+        padding:4px;        
+}
+
+fieldset{
+    padding:5px;
+    color: green;
+    border: 1px solid #DDD;
+    opacity: 0.9;
+}
+
+input[type="text"],
+input[type="password"]{
+        display:block;
+        background-color: transparent;
+        line-height: 28px;
+        border: none;
+        outline: none;
+        font-size: 13px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus{
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+fieldset span{
+        display: block;
+        padding: 2px 0 2px 0;
+        margin: 2px 0 2px 0;
+        color:green;
+        background-color: #f3f3f3;;
+        text-align: center;
+        width: 100%;
+        font-size:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+}
+
+input[type="submit"],
+input[type="button"], .pagination a, .pagination .disabled, .pagination .current, button{
+	font: 10px Consolas, Monaco, monospace;
+    letter-spacing: 1px;
+	margin-top: 10px;
+	padding: 8px 22px 8px 22px;
+	color:#fff;
+	border:none;
+	background-color:#222;
+	cursor: pointer;
+	border-radius: 5px;
+	line-height: 16px;
+	text-transform: uppercase;
+	text-align: left;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,.pagination a:hover, .pagination a:focus, button:hover{
+    	-webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    border-radius:50%;
+    -webkit-transition: all 0.6s linear;
+    -moz-transition:    all 0.6s linear;
+    -o-transition:      all 0.6s linear;
+}
+
+
+/* Home Page - topics/index.html.erb */
+#articles{
+	float:left;
+	max-width:670px;
+	padding-right: 20px;
+	border-bottom: 1px solid green;
+	position: relative;
+}
+
+
+.article{
+
+		float: left;
+}
+
+.article h2{
+	padding-bottom: 20px;
+	padding-right: 20px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #fff;
+	display: inline-block;
+	font-style: italic;
+
+
+}
+
+.article h4{
+		padding: 10px 0 0px 0;
+		text-align: right;
+
+}
+
+.article h5{
+		padding: 0 0 0px 0;
+		text-transform: uppercase;
+		font-family:"KG Be Still And Know";
+		color:#bb3455;
+		font-size: 12px;
+		text-align: right
+}
+
+.article h6{	
+	width: 100% !important;
+	font-size: 13px;
+	line-height: 20px;
+	text-align: right;
+	color:#44b3c2;
+	display: inline;
+	font-style:normal;
+	text-transform: uppercase;
+	font-weight: lighter;
+	font-family:"KG Be Still And Know";
+	letter-spacing: 0.5px;
+}
+
+.article p{
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+
+}
+
+.article .img {
+    border:5px solid #222;
+	float:left;
+	width:240px;
+	height:240px;
+  position: relative;
+  overflow: hidden;
+	background-color: #222;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.img img{
+  position: absolute;
+  left:-20px;
+  display: block;
+  left: 50%;
+  margin-left: -200px;
+  height:250px;
+  width:auto;
+	
+}
+
+
+
+.img h5, .img h4{
+position: absolute;
+color: #fff;
+background-color: #222;
+opacity: 0.9;
+width: 100%;
+text-align: center;
+padding:5px 0 5px 0; 
+border:1px solid #222;
+border-top: 2px solid #fff;
+margin-bottom: 0 !important;
+font-family: Georgia, "Times New Roman", Times, serif;
+font-style: normal;
+text-transform: capitalize;
+}
+.img h5{
+bottom:0px;
+
+}
+.img h4{
+display: none;   
+top:0px;
+padding: 0 0 0 0 !important;
+}
+
+
+.pagination{
+	position: absolute;
+	bottom:20px;
+}
+
+
+
+.pagination .disabled {
+    	margin-top: 10px;
+	padding: 8px 22px 8px 22px;
+	color:#fff;
+	border:none;
+	background-color:#222;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+	text-align: left;}
+.pagination .current {
+   
+}
+.pagination a {
+  margin-top: 10px;
+	padding: 8px 22px 8px 22px;
+	color:#fff;
+	border:none;
+	background-color:#222;
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 12px;
+	line-height: 16px;
+	text-transform: uppercase;
+	text-align: left;}
+
+
+    #article_show{
+    	width:570px;
+    	float:left;
+    	margin-right: 30px;
+    }
+
+    #article_show img{
+    	width:100%;
+    	margin-bottom:20px;
+    }
+
+    #article_show h1{
+    	width:100%;
+    	line-height: 40px;
+    	background-color: #FFF;
+    }
+
+    #article_show #para{
+
+    	
+    	line-height: 20px;
+    	padding-right:8px; 
+    	border-right:2px solid #f2f2f2;
+    }
+
+    #article_show p{
+
+    	padding-bottom: 8px;
+    }
+
+    #post_it{
+    	margin-top: 40px;
+    	width:300px;
+    	float:left;
+    }
+
+    #post_it h3{
+    	padding-top: 40px;
+    	
+    }
+
+    #comments h4{
+    	border-bottom: 1px solid green;
+    }
+    h4{
+    	
+    	text-align: right;
+    	margin-bottom:10px;
+    	padding-bottom:10px;
+    		}
+
+    h5{
+    font-family:"KG Be Still And Know"; 
+	margin: 0px;
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 1px;
+	font-style: italic;
+	text-align: right;
+    color: #588c73;
+}
+
+.article h5{margin-bottom: 0 !important;}
+
+#articles, #side{
+height:880px;
+}
+
+#side{
+	float:left;
+	padding-left:20px;
+	width:250px; 
+	border-bottom: 1px solid green;
+	
+}
+
+
+
+
+
+
+
+#side figure{
+    border:5px solid #222;
+    width:239px;
+    height:239px;
+	margin: 0;
+	padding:0;
+	display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: #222;
+
+  	margin-bottom: 10px;
+}
+
+.bottom:before { bottom: 10px; left: 10px; }
+.bottom figcaption { left: 0; bottom: -30%;
+border-top:1px solid #fff;}
+.bottom:hover figcaption { bottom: 0; }
+
+.top:before { top: 10px; left: 10px; }
+.top figcaption { left: 0; top: -30%;
+border-bottom:1px solid #fff;}
+.top:hover figcaption { top: 0; }
+
+/*
+.top:before { top: 10px; left: 10px; }
+.top figcaption { left: 0; top: -30%; }
+.top:hover figcaption { top: 0; }
+*/
+
+#side figure:hover figcaption {
+  opacity: 0.7;
+}
+
+
+#side figure img{
+    position: absolute;
+    
+    display: block;
+    left: -50px;
+    margin-left: -200px;
+    height:239px;
+    width:auto;
+    display: block;
+    margin:0 auto 0 auto;
+
+}
+
+#side figure:hover:before {
+  opacity: 0;
+}
+
+#side figcaption{
+
+font-family: Georgia, "Times New Roman", Times, serif;
+font-size: 12px;
+position: absolute;
+opacity: 0;
+width:160px;
+padding:20px;
+background: #000;
+text-align: center;
+border-right:1px solid #fff;
+-webkit-transition: all 0.6s ease;
+-moz-transition:    all 0.6s ease;
+-o-transition:      all 0.6s ease;
+-webkit-transition-delay: 0.3s; 
+transition-delay: 0.3s;
+	
+}
+
+
+
+#side figcaption a{
+
+	text-decoration: none;
+	color: #f8f8f8;
+	font-size: 14px;
+	line-height: 18px;
+	letter-spacing: 1px;
+
+}
+
+#contact{
+    margin-top:20px;
+    width:300px;
+    float: left;
+}
+
+#likes{
+    margin-top:20px;
+    margin-left: 20px;
+    width:638px;
+    float: right;
+    text-align: right;
+}
+
+
+
+#result{
+
+    margin-top:20px;
+    margin-left:20px;
+    float:left;
+    width:440px;
+    text-align: right}
+
+dl
+
+dt{
+    
+    font-style: normal;
+    font: bold 14px Consolas, Monaco, monospace;
+    line-height: 24px;
+
+}
+
+dt{
+
+@media (max-width: 480px) {
+
+.article .img {
+
+	
+	
+    width:100%;
+    height:auto;
+  position: relative;
+  overflow: visible;
+    border:1px solid #fff;
+    background-color: #222;
+    margin-bottom: 10px;
+}
+
+.img img {
+	  position: static !important;
+  left:0 !important;
+  display: block !important;
+  left: 0 !important;
+  margin-left: 0px !important;
+  height:auto !important;
+  width:100% !important;
+
+}
+
+#outwrap, #wrapper{
+	margin-right:20px !important;
+	margin-left:20px !important;
+    position: static !important;
+	}
+
+#nav, #logo{
+	width: 100%
+}
+#nav{
+        text-align: left;
+        clear:both;
+        float: left;
+
+}
+
+#nav ul{
+        padding:0 0 0 0 !important;
+        list-style-type: none;
+        text-align: left;
+}
+
+#nav ul li{
+        display:inline;
+        cursor: pointer;
+}
+#articles{
+    padding-right: 0 !important;
+    padding-bottom: 50px !important;
+}
+
+#articles, #side{
+height:auto !important;
+}
+#side figure{
+    width: 100% !important;
+    height:auto !important;
+    position: static !important;
+    overflow: visible !important;
+}
+
+
+#side{padding-left: 0 !important;
+width: 100% !important;}
+
+#side figure img{
+    position: static !important;
+    
+    display: block;
+    left:0 !important;
+    margin-left:0 !important;
+    height:auto !important;
+    width:100% !important;
+}
+
+#side figcaption{
+    position:static !important;
+	width:100% !important;
+	opacity:1 !important;
+	position: initial !important;
+	margin-top: 10px;
+	background: transparent !important;
+	padding: 0;
+}
+
+#side figcaption a{
+
+	font-size: 15px !important;
+	line-height: 20px !important;
+	color: #fff !important;
+}
+
+#side figure:hover figcaption {
+  opacity: 1;
+}
+
+h5{margin-top: 10px !important;}
+
+#result, #search, form ul, #search input[type="text"]{
+    width:100% !important;
+}
+.ex_out{
+    display: none;
+}
+
+#register, #login{
+    background-image: none;
+}
+
+{
+ width: 100% !important;   
+}
+}

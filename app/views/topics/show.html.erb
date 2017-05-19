@@ -1,0 +1,24 @@
+
+<div id="article_show">
+<h1><%=  @topic.title %></h1>
+  <% if @topic.attachment.file? %>
+      <%= image_tag @topic.attachment.url, :class => "picture" %>
+  <% end %>
+  <div id="para"><%= simple_format(@topic.body) %></div>
+  <h4>By: <%= @topic.name %></h4>
+</span>
+</div>
+
+
+<div id="post_it">
+  <% if current_user %>
+      <%= render 'posts/form' %>
+      <h3>Comments</h3>
+      <div id="comments"><%= render 'posts/post' %> </div>
+      <% else %>
+      <h3>Register To Comment</h3>
+
+      <div id="comments"><span class="green">You Must Register to comment.<br /> It's free and easy so you should really do it!</span></div>
+
+  <% end %>
+</div>

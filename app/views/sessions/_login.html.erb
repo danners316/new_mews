@@ -1,0 +1,26 @@
+
+<%= form_tag sessions_path do %>
+<form class="form-legend" autocomplete="off">
+
+<ul>
+<li>
+<fieldset>
+<legend>Name</legend>
+    <%= text_field_tag :name, "Login Name", :size => "20"  %>
+    <span>Enter your full name here</span>
+</li>
+</fieldset>
+<li>
+<fieldset>
+<legend>Pasword</legend>
+    <%= password_field_tag :password, "Password", :size => "20"  %>
+    <span>Enter a Password</span>
+</li>
+</fieldset>
+<li>
+    <%= submit_tag ("Login") %>
+</li>
+</ul>
+</form>
+
+<% end %>
