@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'json', '~> 1.8.0'
+gem 'json', '~> 2.3.1'
 
 group :development, :test do
   gem 'sqlite3'
